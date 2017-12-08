@@ -1,0 +1,452 @@
+{
+	"info": {
+		"name": "Forum",
+		"_postman_id": "2c2bab54-f4da-51dd-dd22-6c59b47f4c72",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"jane\",\n\t\"email\": \"jane@doe.com\",\n\t\"password\": \"555333\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/register",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"grant_type\": \"password\",\n\t\"client_id\": \"2\",\n\t\"client_secret\": \"1P2aSCpScuKW1s9ngG9l7A0pPbmT0SpzGlpxi4dB\",\n\t\"username\": \"jane@doe.com\",\n\t\"password\": \"555333\",\n\t\"scope\": \"*\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/oauth/token",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topics",
+			"description": "",
+			"item": [
+				{
+					"name": "Topic store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title\",\n\t\"body\": \"Topic body\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Topic index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title\",\n\t\"body\": \"Topic body\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Topic show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title\",\n\t\"body\": \"Topic body\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Topic update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title newest one\",\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics/1",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Topic delete",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title newest one\",\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics/1",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"description": "",
+			"item": [
+				{
+					"name": "Post store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title\",\n\t\"body\": \"Topic body\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"body\": \"This is a new reply\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics/2/posts/2",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics",
+								"2",
+								"posts",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics/2/posts/2",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics",
+								"2",
+								"posts",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"description": "",
+			"item": [
+				{
+					"name": "Post like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Topic title\",\n\t\"body\": \"Topic body\"\n}"
+						},
+						"url": {
+							"raw": "http://apiproject.dev/api/topics",
+							"protocol": "http",
+							"host": [
+								"apiproject",
+								"dev"
+							],
+							"path": [
+								"api",
+								"topics"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

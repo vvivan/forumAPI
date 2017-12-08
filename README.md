@@ -11,3 +11,5 @@ Features and functionalities:
 - polymorphic relationships
 - traits
 - JSON responses
+
+Contains Postman foolder with JSON postman collection for playing around.
