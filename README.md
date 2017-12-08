@@ -1,6 +1,6 @@
 # forumAPI
 Simple forum API
-Laravel, Laravel-passport, Laravel-fractal
+with Laravel, Laravel-passport, Laravel-fractal
 
 Features and functionalities:
 - registering users
