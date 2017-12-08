@@ -12,4 +12,4 @@ Features and functionalities:
 - traits
 - JSON responses
 
-Contains Postman foolder with JSON postman collection for playing around.
+Contains Postman foolder with JSON postman collection.
